@@ -43,13 +43,6 @@ samp {
   font-family: monospace, serif;
   font-size: 1em;
 }
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
-}
 small {
   font-size: 80%;
 }
@@ -152,45 +145,36 @@ section.pipeline-component h6 {
   font-weight: 600;
 }
 html {
-  background-color: #eee8d5;
-  color: #657b83;
+  background-color: #000000;
+  color: #c0c0c0;
 }
 body {
-  background-color: #fdf6e3;
-}
-code {
-  background-color: #eee8d5;
-  padding: 2px;
+  background-color: #000000;
 }
 a {
-  color: #b58900;
-}
-a:visited {
-  color: #cb4b16;
-}
-a:hover {
-  color: #cb4b16;
+  color: #86a8e7;
 }
 section.pipeline-component h1 {
-  color: #d33682;
+  display: block;
+  padding: 6px;
+  background-color: #123456;
+  color: #ffffff;
+  max-width: 70%;
+}
+section.pipeline-component h2 {
+  display: block;
+  max-width: 80%;
+  color: #c7c7c7;
+  padding-bottom: 12px;
+  /*border-bottom: 1px solid #c7c7c7;*/
+  /*font-style: italic;*/
 }
 section.pipeline-component h2,
 section.pipeline-component h3,
 section.pipeline-component h4,
 section.pipeline-component h5,
 section.pipeline-component h6 {
-  color: #859900;
   line-height: 50%;
-}
-pre {
-  background-color: #fdf6e3;
-  color: #657b83;
-  border: 1pt solid #93a1a1;
-  padding: 1em;
-  box-shadow: 5pt 5pt 8pt #eee8d5;
-}
-pre code {
-  background-color: #fdf6e3;
 }
 section.pipeline-component h1 {
   font-size: 24px;
@@ -215,7 +199,9 @@ section.pipeline-component h6 {
 .pipeline-message {
 }
 
-.pipeline-component {
+body .pipeline-component {
+  /* Override to default delivery-pipeline-plugin css */
+  padding-left: 10px;
 }
 
 .pipeline {
@@ -227,7 +213,11 @@ section.pipeline-component h6 {
 .pipeline-cell {
 }
 
-.stage_Build {
+.pipeline-cell .stage {
+  margin: 10px 60px 10px 0;
+  transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
 }
 
 div.stage .stage-task {
@@ -236,19 +226,16 @@ div.stage .stage-task {
 }
 
 div.stage {
-  border: none;
+  border: 1px solid #fffff0;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
+  background-color: #000000;
 }
 
 div.stage .stage-header {
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border: none;
-  background-color: #0f3357;
-  color: #FFFFFF;
+  background-color: #000000;
+  color: #D8D8BF;
 }
 
 .stage-name {
@@ -262,24 +249,38 @@ div.stage .stage-header {
 }
 
 .task-content {
+  color: #c7c7c7;
+}
+
+.task-content .task-header .taskname {
+  color: #87a9e5;
 }
 
 .task-progress-running {
-  background-color: #268bd2;
+  background-color: #cf04fa;
   animation-duration: 1s;
   animation-name: bluePulse;
   animation-iteration-count: infinite;
 }
 
 .SUCCESS {
-  border-left: 6px solid #FFFFCC;
+  border-left: 6px solid #00ffaa;
+}
+.SUCCESS a {
+  border-bottom: 1px solid #00ffaa;
 }
 
 .FAILED {
-  border-left: 6px solid #FF0000;
-  color: #FF0000;
+  border-left: 6px solid #e82f12;
+  color: #e82f12;
+}
+.FAILED a {
+  border-bottom: 1px solid #e82f12;
 }
 
 .IDLE {
-  border-left: 6px solid #2aa198;
+  border-left: 6px solid #ff9900;
+}
+.IDLE a {
+  border-bottom: 1px solid #ff9900;
 }
