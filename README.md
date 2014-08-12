@@ -1,5 +1,5 @@
-Stylsh Jenkins Delivery Pipeline
-================================
+Stylish Jenkins Delivery Pipeline
+=================================
 
 You can set "URL for custom CSS file" in Jenkins view settings using [Jenkins Delivery Pipeline Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Delivery+Pipeline+Plugin)
 
